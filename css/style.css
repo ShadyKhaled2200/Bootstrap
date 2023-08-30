@@ -1,0 +1,219 @@
+:root{
+  --main-color: #ef205c
+}
+::selection{
+  background-color: var(--main-color);
+  color: black;
+}
+/* navbar */
+.bg-transparent-black{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#home{
+  background-image: url(../images/bggg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.home-icons i{
+  margin: 10px;
+  border: solid 1px white;
+  padding: 10px;
+  transition: 0.3s;
+  
+}
+.home-icons i:hover{
+  color: var(--main-color);
+  border: solid 1px var(--main-color);
+
+}
+a{
+  text-decoration: none;
+}
+.text-pink{
+color: var(--main-color);
+}
+
+.home-content h1{
+font-size: calc(1.75rem + 3vw);
+}
+
+/* about */
+#about{
+  background-image: url(../images/light_dot.jpg   );
+}
+.heading h2{
+  font-size: 5rem;
+  color: rgba(41, 41, 41, 0.2);
+  letter-spacing: 10px;
+}
+.heading h3{
+  font-size: 2.5rem;
+  letter-spacing: 8px;
+
+}
+
+/* tabs */
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover{
+  border: none;
+  color: var(--main-color);
+  
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  background-color: transparent;
+  border-color: transparent;
+}
+.nav-link{
+  color: black;
+}
+
+
+
+
+
+
+
+/* portfolio */
+
+#portfolio .layer{
+  opacity: 0;
+top: 0;
+bottom: 100%;
+left: 10px;
+right: 10px;
+background-color: rgba(255, 255, 255, 0.6);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+transition: 1s;
+
+}
+
+#portfolio .col-md-4 > div{
+  position: relative;
+}
+#portfolio .col-md-4 > div:hover .layer{
+  opacity: 1;
+  bottom: 10px;
+
+}
+
+/* testomnial */
+.slider-img{
+width: 100px;
+position: relative;
+bottom: 50px;
+}
+
+.carousel-indicators{
+  bottom: -60px;
+  /* background-color: blue; */
+}
+
+
+.carousel-indicators [data-bs-target]{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-image: url(../images/slidedr1.jpg);
+  background-size: 100% 100%;
+}
+
+.carousel-indicators [data-bs-target]:nth-child(1){
+background-image: url(../images/slidedr1.jpg);
+
+}
+.carousel-indicators [data-bs-target]:nth-child(2){
+background-image: url(../images//slider2.jpg);
+
+}
+.carousel-indicators [data-bs-target]:nth-child(3){
+background-image: url(../images/slider2.jpg);
+
+}
+.carousel-indicators [data-bs-target]:nth-child(4){
+background-image: url(../images/slider3.jpg);
+
+}
+
+
+.btn-up{
+  color: blue;
+  font-size: 2rem;
+  position: fixed;
+  bottom: 20px ;
+  right: 20px;
+  z-index:  999999;
+  cursor: pointer;
+  display: none;
+}
+
+body{
+  overflow: hidden;
+}
+
+
+#loading{
+  display: flex;
+
+  width: 100%;
+  height: 100vh;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999999999999;
+  
+}
+
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 1s linear infinite
+}
+.loader::before , .loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #FFF;
+  animation: prixClipFix 2s linear infinite ;
+}
+.loader::after{
+  inset: 8px;
+  transform: rotate3d(90, 90, 0, 180deg );
+  border-color: #f50d47;
+}
+
+@keyframes rotate {
+  0%   {transform: rotate(0deg)}
+  100%   {transform: rotate(360deg)}
+}
+
+@keyframes prixClipFix {
+    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+    75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+}
+
+
+
+
+.draw-boarder{
+  background-color: #f50d47;
+  height: 3px;
+  animation: border 1 0.3s;
+}
+
+@keyframes border{
+  0%{width: 0%}
+  100%{width: 100%}
+}
